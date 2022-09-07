@@ -1,0 +1,136 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: 333;
+  /* background: rgb(2, 54, 97); */
+  background: #a1c3ff;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2 {
+  margin-bottom: 15px;
+}
+
+.container {
+  max-width: 1100px;
+  /* This margin puts it in the middle */
+  margin: 0 auto;
+  /* Top/Buttom - 0 Left/Right - 30px */
+  padding: 0 30px;
+}
+
+.navbar {
+  background: #0151cc;
+  color: #fff;
+  height: 60px;
+}
+
+/* Lets get rid of the default link style */
+ul {
+  list-style-type: none;
+}
+
+/* Let's make the logo large and bold */
+.navbar .logo {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* SO WE ARE GOING TO USE FLEX BOX */
+.navbar .container {
+  /* When we give it a height of 100% everything appears in the middle */
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+
+/* So the ul is vertical we want the ul to go horizontal */
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  /* To add some space between the li's */
+  margin-left: 20px;
+}
+
+.navbar a:hover {
+  color: red;
+}
+
+/* So Let's work on the header now */
+.header {
+  background-color: #3474e6;
+  color: #fff;
+  min-height: 400px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.header img {
+  max-width: 400px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: center;
+}
+
+.boxes .container {
+  display: flex;
+}
+
+.box {
+  /* We want each box to be even */
+  flex: 1;
+  background: #0151cc;
+  color: #fff;
+  border-radius: 10px ;
+  margin: 20px 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+  padding: 15px 20px;
+}
+
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    padding-top: 20px;
+    text-align: center;
+    display: block;
+  }
+
+  .boxes .container{
+    display: block;
+    align-items: center;
+  }
+}
+
+
+footer{
+  text-align: center;
+  height: 30px;
+  background-color: black;
+  color: white;
+}
